@@ -3,720 +3,737 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Network - Protect Earth</title>
+    <title>MandarinFlow | Learn Chinese, Unlock the Future</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-
-        :root {
-            --primary: #2e7d32;
-            --secondary: #4caf50;
-            --accent: #8bc34a;
-            --light: #e8f5e9;
-            --dark: #1b5e20;
-            --text: #333333;
-            --white: #ffffff;
-        }
-
+        
         body {
-            background-color: var(--light);
-            color: var(--text);
+            font-family: 'Noto Sans SC', 'Poppins', sans-serif;
             line-height: 1.6;
+            color: #1d3557; /* 墨竹深蓝 */
+            background-color: #f8f9fa;
         }
-
-        header {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        
+        h1, h2, h3, h4 {
+            font-family: 'Poppins', 'Noto Sans SC', sans-serif;
+            font-weight: 700;
+            line-height: 1.3;
         }
-
+        
         .container {
-            width: 90%;
+            width: 100%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
-
-        .nav-container {
+        
+        /* 1. 顶部导航栏 - 融合国潮红 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 15px rgba(230, 57, 70, 0.08);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
         }
-
+        
         .logo {
             display: flex;
             align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
+        }
+        
+        .logo-icon {
+            color: #e63946; /* 国潮红 */
+            font-size: 28px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 24px;
             font-weight: 700;
+            color: #1d3557;
         }
-
-        .logo i {
-            font-size: 2rem;
+        
+        .logo-text span {
+            color: #e63946;
         }
-
-        nav ul {
+        
+        .nav-links {
             display: flex;
             list-style: none;
         }
-
-        nav ul li {
-            margin-left: 2rem;
+        
+        .nav-links li {
+            margin-left: 30px;
         }
-
-        nav ul li a {
-            color: var(--white);
+        
+        .nav-links a {
             text-decoration: none;
+            color: #457b9d;
             font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: #e63946;
+        }
+        
+        .cta-button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 50px; /* 更加圆润现代化 */
+            font-weight: 600;
+            cursor: pointer;
             transition: all 0.3s ease;
-            padding: 0.5rem 0;
-            position: relative;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.3);
         }
-
-        nav ul li a:hover {
-            color: var(--accent);
+        
+        .cta-button:hover {
+            background-color: #b71c1c;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(230, 57, 70, 0.4);
         }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #1d3557;
+            cursor: pointer;
         }
-
-        nav ul li a:hover::after {
-            width: 100%;
-        }
-
+        
+        /* 2. 首屏展示区 - 鲜明活力渐变 */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80');
-            background-size: cover;
-            background-position: center;
-            height: 80vh;
+            padding: 160px 0 100px;
+            background: linear-gradient(135deg, #ffeedd 0%, #fff5f5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 装饰背景元素 */
+        .hero::before {
+            content: "汉";
+            position: absolute;
+            right: -5%;
+            bottom: -5%;
+            font-size: 30rem;
+            color: rgba(230, 57, 70, 0.03);
+            font-weight: 900;
+            z-index: 1;
+        }
+        
+        .hero-content {
             display: flex;
             align-items: center;
-            text-align: center;
-            color: var(--white);
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
         }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+        
+        .hero-text {
+            flex: 1;
+            padding-right: 40px;
         }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        
+        .hero-text h1 {
+            font-size: 46px;
+            margin-bottom: 20px;
+            color: #1d3557;
         }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
+        
+        .hero-text h1 span {
+            color: #e63946;
+            border-bottom: 3px solid #ffb703; /* 金黄下划线线 */
         }
-
-        .btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: var(--white);
-            padding: 0.8rem 2rem;
+        
+        .hero-text p {
+            font-size: 18px;
+            color: #457b9d;
+            margin-bottom: 35px;
+            max-width: 600px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .secondary-button {
+            background-color: white;
+            color: #e63946;
+            border: 2px solid #e63946;
+            padding: 12px 28px;
             border-radius: 50px;
-            text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
         }
-
-        .btn:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        
+        .secondary-button:hover {
+            background-color: #fff5f5;
         }
-
-        section {
-            padding: 5rem 0;
+        
+        .hero-image {
+            flex: 1;
+            text-align: center;
         }
-
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(230, 57, 70, 0.15);
+            border: 4px solid white;
+        }
+        
+        /* 3. 办学特色区 - 浮动阴影卡片 */
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 60px;
         }
-
+        
         .section-title h2 {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
+            font-size: 36px;
+            color: #1d3557;
+            margin-bottom: 15px;
             position: relative;
             display: inline-block;
         }
 
         .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
+            content: "";
+            width: 60%;
             height: 4px;
-            background-color: var(--accent);
+            background-color: #ffb703;
+            position: absolute;
+            bottom: -8px;
+            left: 20%;
             border-radius: 2px;
         }
-
+        
         .section-title p {
-            color: var(--text);
+            color: #457b9d;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 15px auto 0;
+        }
+        
+        .features {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+        
+        .feature-card {
+            background: #fff;
+            padding: 35px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(29, 53, 87, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-bottom: 3px solid transparent;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.12);
+            border-bottom: 3px solid #e63946;
+        }
+        
+        .feature-icon {
+            background-color: #fff3f3;
+            color: #e63946;
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 28px;
         }
 
-        .about-content {
+        /* 给第二个和第三个图标换个颜色，增加色彩鲜明度 */
+        .features-grid .feature-card:nth-child(2) .feature-icon {
+            background-color: #fff9e6;
+            color: #ffb703;
+        }
+        .features-grid .feature-card:nth-child(3) .feature-icon {
+            background-color: #e6f7ff;
+            color: #457b9d;
+        }
+        
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #1d3557;
+        }
+        
+        .feature-card p {
+            color: #556b83;
+            font-size: 15px;
+        }
+        
+        /* 4. 核心课程体系 - 精美价格/课程卡片 */
+        .pricing {
+            padding: 100px 0;
+            background-color: #f1faee; /* 极淡的清新绿底色 */
+        }
+        
+        .pricing-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 35px;
             align-items: center;
         }
-
-        .about-img {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        
+        .pricing-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px 30px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.03);
+            text-align: center;
+            transition: transform 0.3s;
+            position: relative;
         }
-
-        .about-img img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .about-img:hover img {
+        
+        /* 王牌推荐课程高亮 */
+        .pricing-card.featured {
+            border: 3px solid #e63946;
             transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(230, 57, 70, 0.15);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(90deg, #ffb703, #e63946);
+            color: white;
+            padding: 6px 25px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-5px);
+        }
+        
+        .plan-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1d3557;
         }
 
-        .about-text h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: var(--dark);
+        .plan-desc {
+            font-size: 14px;
+            color: #778da9;
+            margin-bottom: 20px;
+        }
+        
+        .plan-price {
+            font-size: 40px;
+            font-weight: 700;
+            color: #e63946;
+            margin-bottom: 25px;
+        }
+        
+        .plan-price span {
+            font-size: 16px;
+            color: #457b9d;
+        }
+        
+        .plan-features {
+            list-style: none;
+            margin-bottom: 35px;
+            text-align: left;
+            padding-left: 15px;
+        }
+        
+        .plan-features li {
+            padding: 12px 0;
+            border-bottom: 1px dashed #e8ecef;
+            color: #457b9d;
+            font-size: 15px;
         }
 
-        .about-text p {
-            margin-bottom: 1.5rem;
+        .plan-features li i {
+            color: #e63946;
+            margin-right: 10px;
+        }
+        
+        .plan-features li:last-child {
+            border-bottom: none;
         }
 
-        .stats {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .stat-item {
-            text-align: center;
-            padding: 2rem 1rem;
-            background-color: var(--white);
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .stat-item:hover {
-            transform: translateY(-10px);
-        }
-
-        .stat-item i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        .stat-item h3 {
-            font-size: 2.5rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: var(--text);
-        }
-
-        .initiatives {
-            background-color: var(--white);
-        }
-
-        .initiatives-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .initiative-card {
-            background-color: var(--light);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease;
-        }
-
-        .initiative-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .initiative-img {
-            height: 200px;
-            overflow: hidden;
-        }
-
-        .initiative-img img {
+        .pricing-card button {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
         }
-
-        .initiative-card:hover .initiative-img img {
-            transform: scale(1.1);
-        }
-
-        .initiative-content {
-            padding: 1.5rem;
-        }
-
-        .initiative-content h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: var(--dark);
-        }
-
-        .initiative-content p {
-            margin-bottom: 1.5rem;
-        }
-
-        .cta {
-            background: linear-gradient(to right, var(--primary), var(--secondary));
-            color: var(--white);
+        
+        /* 5. 激发行动Banner */
+        .cta-section {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #e63946 0%, #1d3557 100%);
             text-align: center;
-            padding: 5rem 0;
+            color: white;
+            position: relative;
         }
-
-        .cta h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
+        
+        .cta-section h2 {
+            font-size: 38px;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
-
-        .cta p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+        
+        .cta-section p {
+            font-size: 18px;
             max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            margin: 0 auto 35px;
+            opacity: 0.9;
         }
-
-        .cta .btn {
-            background-color: var(--white);
-            color: var(--primary);
+        
+        .cta-section .cta-button {
+            background-color: #ffb703; /* 醒目的金黄按钮 */
+            color: #1d3557;
+            font-size: 17px;
+            padding: 15px 45px;
+            box-shadow: 0 4px 15px rgba(255, 183, 3, 0.4);
         }
-
-        .cta .btn:hover {
-            background-color: var(--accent);
-            color: var(--white);
+        
+        .cta-section .cta-button:hover {
+            background-color: white;
+            color: #e63946;
+            box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
         }
-
+        
+        /* 6. 页脚区 */
         footer {
-            background-color: var(--dark);
-            color: var(--white);
-            padding: 3rem 0 1rem;
+            background-color: #1d3557;
+            color: #a8dadc;
+            padding: 70px 0 20px;
         }
-
+        
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            margin-bottom: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 50px;
         }
-
+        
         .footer-column h3 {
-            font-size: 1.3rem;
-            margin-bottom: 1.5rem;
+            font-size: 18px;
+            color: white;
+            margin-bottom: 25px;
             position: relative;
-            padding-bottom: 10px;
         }
 
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
+        .footer-column h3::before {
+            content: "";
+            width: 30px;
             height: 2px;
-            background-color: var(--accent);
+            background-color: #e63946;
+            position: absolute;
+            bottom: -7px;
+            left: 0;
         }
-
-        .footer-column p {
-            margin-bottom: 1rem;
-        }
-
+        
         .footer-links {
             list-style: none;
         }
-
+        
         .footer-links li {
-            margin-bottom: 0.8rem;
+            margin-bottom: 12px;
         }
-
-        .footer-links li a {
-            color: var(--light);
+        
+        .footer-links a {
+            color: #a8dadc;
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: color 0.3s;
+            font-size: 15px;
         }
-
-        .footer-links li a:hover {
-            color: var(--accent);
-            padding-left: 5px;
+        
+        .footer-links a:hover {
+            color: #ffb703;
         }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: var(--white);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
+        
         .copyright {
             text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 20px;
+            border-top: 1px solid rgba(168, 218, 220, 0.2);
+            font-size: 14px;
+            color: #f1faee;
+            opacity: 0.7;
         }
-
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
+        
+        /* 7. 响应式布局优化 */
         @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
+            .hero-content {
+                flex-direction: column;
             }
             
-            .initiatives-grid {
-                grid-template-columns: repeat(2, 1fr);
+            .hero-text {
+                padding-right: 0;
+                margin-bottom: 50px;
+                text-align: center;
             }
             
-            .footer-content {
-                grid-template-columns: repeat(2, 1fr);
+            .hero-text p {
+                margin: 0 auto 30px;
             }
             
-            .stats {
-                grid-template-columns: repeat(2, 1fr);
+            .pricing-card.featured {
+                transform: none;
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-5px);
+            }
+            
+            .hero-buttons {
+                justify-content: center;
             }
         }
-
+        
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero p {
-                font-size: 1.1rem;
-            }
-            
-            nav ul {
+            .nav-links {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: var(--primary);
-                flex-direction: column;
-                padding: 1rem 0;
-                text-align: center;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
             }
             
-            nav ul.active {
-                display: flex;
-            }
-            
-            nav ul li {
-                margin: 0;
-                padding: 0.8rem 0;
-            }
-            
-            .mobile-menu {
+            .mobile-menu-btn {
                 display: block;
             }
             
-            .initiatives-grid {
-                grid-template-columns: 1fr;
+            .hero-text h1 {
+                font-size: 34px;
             }
             
-            .footer-content {
-                grid-template-columns: 1fr;
+            .section-title h2 {
+                font-size: 28px;
             }
-            
-            .stats {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Animation for stats counter */
-        .counter {
-            transition: all 0.5s ease;
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
+
     <header>
-        <div class="container nav-container">
-            <div class="logo">
-                <i class="fas fa-seedling"></i>
-                <span>Green Network</span>
-            </div>
+        <div class="container">
             <nav>
-                <div class="mobile-menu">
-                    <i class="fas fa-bars"></i>
+                <div class="logo">
+                    <div class="logo-icon"><i class="fas fa-gavel"></i></div> <div class="logo-text">Mandarin<span>Flow</span></div>
                 </div>
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#initiatives">Initiatives</a></li>
-                    <li><a href="#get-involved">Get Involved</a></li>
+                
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#why-us">Why Us</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                
+                <button class="cta-button" onclick="alert('Welcome! Redirecting to application form...')">Apply Now</button>
+                <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container hero-content">
-            <h1>Protect Our Planet, Preserve Our Future</h1>
-            <p>Join the global movement to create a sustainable world through conservation, education, and community action.</p>
-            <a href="#get-involved" class="btn">Join Our Network</a>
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Learn Chinese, Unlock Your <span>Global Future</span></h1>
+                    <p>Immerse yourself in professional Chinese language training. From zero basics to HSK mastery, we bridge your career and cultural journey with professional native instructors.</p>
+                    <div class="hero-buttons">
+                        <button class="cta-button" onclick="alert('Booked! We will mail you the details.')">Free Trial Lesson</button>
+                        <button class="secondary-button" onclick="alert('Loading video preview...')">Explore Culture</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1508672019048-805c876b67e2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Learn Chinese Cultural Immersion">
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about">
+    <section class="features" id="features">
         <div class="container">
             <div class="section-title">
-                <h2>About Green Network</h2>
-                <p>We are a global community dedicated to environmental protection and sustainable development.</p>
+                <h2>Why Study With Us?</h2>
+                <p>We combine immersive communication methods with structured milestones to ensure efficient results.</p>
             </div>
-            <div class="about-content">
-                <div class="about-img">
-                    <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Team planting trees">
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Certified Native Tutors</h3>
+                    <p>All teachers hold Master's degrees in TCSOL (Teaching Chinese to Speakers of Other Languages) with 5+ years of global experience.</p>
                 </div>
-                <div class="about-text">
-                    <h3>Our Mission</h3>
-                    <p>Green Network is committed to creating a sustainable future by protecting natural ecosystems, promoting renewable energy, and empowering communities to take environmental action.</p>
-                    <p>Founded in 2010, we've grown from a small grassroots organization to an international network with over 50,000 members across 120 countries.</p>
-                    <p>Our approach combines scientific research, community engagement, and policy advocacy to address the most pressing environmental challenges of our time.</p>
-                    <a href="#" class="btn">Learn More</a>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Immersive Method</h3>
+                    <p>Say goodbye to boring rote learning. Learn through practical, situational communication and real-life Chinese culture projects.</p>
                 </div>
-            </div>
-            <div class="stats">
-                <div class="stat-item">
-                    <i class="fas fa-tree"></i>
-                    <h3 class="counter" data-target="2500000">0</h3>
-                    <p>Trees Planted</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-users"></i>
-                    <h3 class="counter" data-target="50000">0</h3>
-                    <p>Active Members</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-globe-americas"></i>
-                    <h3 class="counter" data-target="120">0</h3>
-                    <p>Countries Reached</p>
-                </div>
-                <div class="stat-item">
-                    <i class="fas fa-recycle"></i>
-                    <h3 class="counter" data-target="1500">0</h3>
-                    <p>Cleanup Projects</p>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-calendar-alt"></i></div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>Tailor your learning pace. We offer 24/7 online classes and intensive on-campus modules fitting your personal lifestyle.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Initiatives Section -->
-    <section class="initiatives" id="initiatives">
+    <section class="pricing" id="courses">
         <div class="container">
             <div class="section-title">
-                <h2>Our Initiatives</h2>
-                <p>Discover the key programs and projects we're implementing to protect our planet.</p>
+                <h2>Our Premium Programs</h2>
+                <p>Select the ideal roadmap tailored to your specific personal, academic, or professional career objectives.</p>
             </div>
-            <div class="initiatives-grid">
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://dialogue.earth/content/uploads/2021/04/lessons-from-the-rush-to-reforest-china-dialogue-2400x1599.jpg" alt="Reforestation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Global Reforestation</h3>
-                        <p>Planting millions of trees worldwide to restore ecosystems, combat climate change, and protect biodiversity.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Survival Mandarin</h3>
+                    <p class="plan-desc">Best for travelers and absolute beginners.</p>
+                    <div class="plan-price">$199<span>/ Level</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Pinyin & Tone foundations</li>
+                        <li><i class="fas fa-check"></i> 500+ Essential vocabulary</li>
+                        <li><i class="fas fa-check"></i> 20+ Daily conversational tasks</li>
+                        <li><i class="fas fa-check"></i> Group culture workshops</li>
+                    </ul>
+                    <button class="secondary-button" onclick="alert('Enrolled in Survival Mandarin!')">Learn More</button>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1621451537084-482c73073a0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" alt="Ocean Conservation">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Ocean Conservation</h3>
-                        <p>Protecting marine ecosystems, reducing plastic pollution, and promoting sustainable fishing practices.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                
+                <div class="pricing-card featured">
+                    <div class="featured-badge">MOST POPULAR</div>
+                    <h3 class="plan-name">HSK Success Masterclass</h3>
+                    <p class="plan-desc">Comprehensive training from HSK 1 to HSK 6.</p>
+                    <div class="plan-price">$399<span>/ Level</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Official standard curriculum</li>
+                        <li><i class="fas fa-check"></i> Weekly 1-on-1 speaking evaluation</li>
+                        <li><i class="fas fa-check"></i> Mock exams & individualized feedback</li>
+                        <li><i class="fas fa-check"></i> Guaranteed certification passing</li>
+                    </ul>
+                    <button class="cta-button" onclick="alert('Welcome to HSK Bootcamp! 14 days refund guarantee activated.')">Join Bootcamp</button>
                 </div>
-                <div class="initiative-card">
-                    <div class="initiative-img">
-                        <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" alt="Renewable Energy">
-                    </div>
-                    <div class="initiative-content">
-                        <h3>Renewable Energy</h3>
-                        <p>Promoting solar, wind, and other clean energy sources to reduce dependence on fossil fuels.</p>
-                        <a href="#" class="btn">Learn More</a>
-                    </div>
+                
+                <div class="pricing-card">
+                    <h3 class="plan-name">Business Chinese</h3>
+                    <p class="plan-desc">For professionals seeking career growth.</p>
+                    <div class="plan-price">$549<span>/ Course</span></div>
+                    <ul class="plan-features">
+                        <li><i class="fas fa-check"></i> Corporate communication etiquette</li>
+                        <li><i class="fas fa-check"></i> Negotiation & Presentation skills</li>
+                        <li><i class="fas fa-check"></i> Industry-specific terminology</li>
+                        <li><i class="fas fa-check"></i> Networking mentorship events</li>
+                    </ul>
+                    <button class="secondary-button" onclick="alert('Connecting with our Business Program Advisor...')">Contact Consultant</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta" id="get-involved">
+    <section class="cta-section">
         <div class="container">
-            <h2>Join Our Global Movement</h2>
-            <p>Together, we can create a sustainable future for generations to come. Every action counts, no matter how small.</p>
-            <a href="#" class="btn">Become a Member</a>
+            <h2>Ready to Speak Chinese Fluently?</h2>
+            <p>Join over 5,000 global students accelerating their language mastery today. Get a free language proficiency assessment session upon registration.</p>
+            <button class="cta-button" onclick="alert('Great choice! Check your inbox for the placement test link.')">Claim Your Free Lesson</button>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-column">
-                    <h3>Green Network</h3>
-                    <p>We are dedicated to protecting our planet through collaborative action, education, and sustainable solutions.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <div class="logo">
+                        <div class="logo-text" style="color: white;">Mandarin<span>Flow</span></div>
                     </div>
+                    <p style="margin-top: 20px; color: #a8dadc; font-size: 14px;">The elite international center for Chinese linguistic excellence and professional cultural immersion solutions.</p>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>Programs</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#initiatives">Initiatives</a></li>
-                        <li><a href="#get-involved">Get Involved</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Adult Courses</a></li>
+                        <li><a href="#">Kids Mandarin</a></li>
+                        <li><a href="#">HSK Preparation</a></li>
+                        <li><a href="#">Summer Camp 2026</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
-                    <h3>Our Programs</h3>
+                    <h3>Resources</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Reforestation</a></li>
-                        <li><a href="#">Ocean Cleanup</a></li>
-                        <li><a href="#">Wildlife Protection</a></li>
-                        <li><a href="#">Climate Education</a></li>
-                        <li><a href="#">Sustainable Agriculture</a></li>
+                        <li><a href="#">Free Pinyin Chart</a></li>
+                        <li><a href="#">Grammar Guides</a></li>
+                        <li><a href="#">HSK Mock Tests</a></li>
+                        <li><a href="#">Student Blog</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-column">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt"></i> Copper Creek Drive, New York</p>
-                    <p><i class="fas fa-phone"></i> +1 (312) 171-0771</p>
-                    <p><i class="fas fa-envelope"></i> support@greennetwork.org</p>
+                    <ul class="footer-links" style="color: #a8dadc; font-size: 14px;">
+                        <li style="margin-bottom: 8px;"><i class="fas fa-envelope" style="color: #ffb703; margin-right: 8px;"></i> admissions@mandarinflow.com</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-phone" style="color: #ffb703; margin-right: 8px;"></i> +86 (21) 5432-xxxx</li>
+                        <li style="margin-bottom: 8px;"><i class="fas fa-map-marker-alt" style="color: #ffb703; margin-right: 8px;"></i> Shanghai, China</li>
+                    </ul>
                 </div>
             </div>
+            
             <div class="copyright">
-                <p>&copy; 2025 Green Network. All rights reserved.</p>
+                <p>&copy; 2026 MandarinFlow Institute. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            document.querySelector('nav ul').classList.toggle('active');
-        });
-
-        // Counter Animation
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200; // The lower the slower
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
+        // 移动端汉堡菜单控制逻辑（已重构：使用更科学的 classList 切换，避免响应式失效）
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '70px';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.backgroundColor = 'white';
+                navLinks.style.padding = '20px';
+                navLinks.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
                 
-                const inc = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + inc);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
-        }
-
-        // Initialize counters when page loads
-        window.addEventListener('load', animateCounters);
-
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    document.querySelector('nav ul').classList.remove('active');
-                }
-            });
+                document.querySelectorAll('.nav-links li').forEach(item => {
+                    item.style.margin = '10px 0';
+                    item.style.marginLeft = '0';
+                });
+            }
         });
     </script>
 </body>
-
 </html>
